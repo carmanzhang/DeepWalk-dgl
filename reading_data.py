@@ -33,7 +33,7 @@ def ReadTxtNet(file_path="", undirected=True):
     net = {}
     with open(file_path, "r") as f:
         for line in f.readlines():
-            n1, n2 = list(map(int, line.strip().split(" ")[:2]))
+            n1, n2 = list(map(str, line.strip().split(" ")[:2]))
             if n1 not in node2id:
                 node2id[n1] = cid
                 id2node[cid] = n1
